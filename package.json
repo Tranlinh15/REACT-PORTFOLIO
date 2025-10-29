@@ -29,4 +29,10 @@
     "typescript-eslint": "^8.45.0",
     "vite": "^7.1.7"
   }
+  
+}
+"homepage": "https://Tranlinh15.github.io/REACT-PORTFOLIO",
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
 }
