@@ -1,0 +1,205 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* CV styles */
+.gradient-text {
+  background: linear-gradient(90deg, #2563eb, #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 0.75rem;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  box-shadow: none;
+  transition: background 200ms;
+}
+.btn-primary:hover {
+  background: #1e40af;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(37, 99, 235, 0.35);
+  color: #2563eb;
+  background: transparent;
+  font-weight: 600;
+  transition: background 200ms;
+}
+.btn-secondary:hover {
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.link {
+  color: #2563eb;
+  transition: color 150ms;
+}
+.link:hover {
+  color: #1e40af;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+@media (prefers-color-scheme: dark) {
+  .section-title {
+    color: #e2e8f0;
+  }
+}
+
+.skill-chip {
+  padding: 0.5rem 0.75rem;
+  background: rgba(37, 99, 235, 0.06);
+  color: #0f172a;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+}
+@media (prefers-color-scheme: dark) {
+  .skill-chip {
+    background: rgba(37, 99, 235, 0.12);
+    color: #e2e8f0;
+    border-color: rgba(59, 130, 246, 0.35);
+  }
+}
+
+/* project-card replaced by simple bordered article in App.tsx */
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.1);
+  color: #1e40af;
+  border: 1px solid rgba(37, 99, 235, 0.25);
+}
+@media (prefers-color-scheme: dark) {
+  .tag {
+    background: rgba(37, 99, 235, 0.15);
+    color: #93c5fd;
+    border-color: rgba(37, 99, 235, 0.35);
+  }
+}
+
+/* removed glass card for minimal design */
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.animate-float { animation: float 4s ease-in-out infinite; }
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-up { animation: slideUp 600ms ease 60ms both; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-in { animation: fadeIn 700ms ease both; }
+
+@keyframes pingSlow {
+  0% { transform: scale(1); opacity: 1; }
+  70% { transform: scale(1.5); opacity: 0; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+.animate-ping-slow { animation: pingSlow 1.8s cubic-bezier(0, 0, 0.2, 1) infinite; }
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1rem;
+  border-radius: 0.9rem;
+  background: rgba(37,99,235,0.06);
+  border: 1px solid rgba(37,99,235,0.22);
+  color: #0f172a;
+  transition: transform 180ms, background 180ms, border-color 180ms;
+}
+.contact-item:hover {
+  transform: translateY(-2px);
+  background: rgba(37,99,235,0.12);
+  border-color: rgba(37,99,235,0.35);
+}
+@media (prefers-color-scheme: dark) {
+  .contact-item { color: #e2e8f0; background: rgba(37,99,235,0.12); border-color: rgba(59,130,246,0.35); }
+  .contact-item:hover { background: rgba(37,99,235,0.2); }
+}
+
+/* Portfolio additions */
+/* nav-link active effect removed for simplicity */
+
+.filter-chip {
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(37,99,235,0.25);
+  background: rgba(37,99,235,0.06);
+  color: #1e3a8a;
+  font-weight: 600;
+  transition: transform 150ms, background 150ms, border-color 150ms;
+}
+.filter-chip:hover { transform: translateY(-1px); }
+.filter-chip--active { background: #1e40af; color: #fff; border-color: #1e40af; }
+@media (prefers-color-scheme: dark) {
+  .filter-chip { background: rgba(37,99,235,0.12); color: #e2e8f0; }
+}
