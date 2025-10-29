@@ -1,6 +1,5 @@
 {
-  "name": "REACT-PORTFOLIO",
-  "private": false,
+  "name": "portfolio",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
